@@ -123,7 +123,7 @@ Sur le dernier décile de prédiction, le coût réel moyen observé (4 527 €)
 3. **Enrichir les données** : le R² limité suggère que des variables clés manquent (circonstances du sinistre, franchise, type de dommage, historique de sinistralité, données météo, coût de réparation).
 4. **Ne pas choisir un modèle sur une seule métrique** : conserver le GLM Gamma comme référence actuarielle (interprétabilité, cohérence statistique, communication métier) et utiliser un modèle Machine Learning (XGBoost) comme **challenger** pour évaluer le potentiel de gain en précision.
 5. **Envisager une approche hybride** : GLM pour l'interprétabilité et la gouvernance actuarielle, modèle ML pour capter les non-linéarités, les deux se complètent plus qu'ils ne s'opposent.
-6. **Étendre vers une tarification complète fréquence × sévérité**, en combinant ce modèle de coût moyen par sinistre à un modèle de fréquence de sinistralité, pour aboutir à un coût annuel attendu comparable à la prime actuelle.
+
 
 ## 6. Pistes d'amélioration
 
