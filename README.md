@@ -112,7 +112,7 @@ Sur le dernier décile de prédiction, le coût réel moyen observé (4 527 €)
 <p align="center"><img src="fig_shap_summary.png" width="700" alt="SHAP summary plot"></p>
 
 - **Le pouvoir explicatif global reste limité** (R² du meilleur modèle : 0,066) — une large part de la variabilité des coûts n'est pas expliquée par les variables disponibles, ce qui est cohérent avec la nature des sinistres (facteurs souvent absents des données : circonstances précises, météo, type de dommage).
-- **`DrivAge`, `VehAge` et `BonusMalus`** ressortent comme les variables les plus influentes selon le Random Forest et SHAP, malgré une significativité limitée en test univarié — signe d'effets combinés/non-linéaires mieux captés par les modèles d'ensemble que par les tests marginaux.
+- **`DrivAge`, `VehAge` et `BonusMalus`** ressortent comme les variables les plus influentes selon le Random Forest et SHAP, malgré une significativité limitée en test univarié, signe d'effets combinés/non-linéaires mieux captés par les modèles d'ensemble que par les tests marginaux.
 - **`VehPower`** (puissance du véhicule) reste le facteur le plus robuste statistiquement (Kruskal-Wallis significatif).
 - Le GLM Gamma met en évidence des effets multiplicatifs significatifs sur certaines modalités de **Garage** et **Marketing**.
 
