@@ -30,12 +30,12 @@ Projet de Data Science actuarielle visant à modéliser le **coût des sinistres
 
 | | |
 |---|---|
-| 📊 **Sinistres modélisés** | 729 (garantie Damage) |
-| 💰 **Coût moyen / médian** | 2 091 € / 1 139 € (skewness 3,65 → forte asymétrie) |
-| 🏆 **Meilleur modèle (MAE/RMSE/R²)** | XGBoost |
-| 🏆 **Meilleur modèle (déviance Gamma)** | GLM Gamma |
-| ⚠️ **Limite principale** | Sous-estimation des sinistres extrêmes (P95+/P99+) |
-| 🎯 **Best fit distribution** | Weibull (AIC 12 557) |
+| **Sinistres modélisés** | 729 (garantie Damage) |
+| **Coût moyen / médian** | 2 091 € / 1 139 € (skewness 3,65 → forte asymétrie) |
+| **Meilleur modèle (MAE/RMSE/R²)** | XGBoost |
+| **Meilleur modèle (déviance Gamma)** | GLM Gamma |
+| **Limite principale** | Sous-estimation des sinistres extrêmes (P95+/P99+) |
+| **Best fit distribution** | Weibull (AIC 12 557) |
 
 ---
 
