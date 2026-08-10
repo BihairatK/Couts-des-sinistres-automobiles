@@ -62,7 +62,7 @@ Il permet de relier directement **profil assuré + véhicule + contrat → coût
 3. **Analyse exploratoire des coûts** : la distribution est **très asymétrique** (moyenne 2 091 €, médiane 1 139 €, skewness 3,65), justifiant une transformation logarithmique (skewness ramenée à -0,55) et l'usage de modèles adaptés aux distributions positives.
 4. **Ajustement de distributions théoriques** (Gamma, Lognormale, Weibull, Exponentielle) comparées par AIC/BIC :
 
-   <p align="center"><img src="figures/fig_qqplots.png" width="800" alt="QQ-plots Gamma, Lognormale, Weibull"></p>
+   <p align="center"><img src="fig_qqplots.png" width="800" alt="QQ-plots Gamma, Lognormale, Weibull"></p>
 
    La **Weibull** obtient le meilleur ajustement (AIC 12 557), suivie de près par la Lognormale. Les QQ-plots montrent cependant que même la meilleure distribution théorique peine à capturer la queue extrême des coûts, un signal avant-coureur de la difficulté rencontrée plus tard par les modèles prédictifs.
 
@@ -85,7 +85,7 @@ Il permet de relier directement **profil assuré + véhicule + contrat → coût
 
 **Aucun modèle ne domine sur toutes les métriques**, et c'est en soi l'un des enseignements du projet : XGBoost minimise le MAE/RMSE et maximise le R², mais le GLM Gamma reste supérieur sur la **déviance Gamma**, la métrique la plus alignée avec la structure statistique réelle des coûts de sinistres. Le choix du modèle dépend donc de l'objectif : performance brute de prédiction (XGBoost) vs. cohérence actuarielle et interprétabilité (GLM Gamma). C'est le GLM Gamma qui a été retenu pour l'analyse des résidus, en raison de sa pertinence pour cette problématique de sévérité et de sa capacité à produire des effets directement interprétables.
 
-<p align="center"><img src="figures/fig_residus.png" width="800" alt="Résidus vs prédictions et QQ-plot des résidus"></p>
+<p align="center"><img src="fig_residus.png" width="800" alt="Résidus vs prédictions et QQ-plot des résidus"></p>
 
 ### ⚠️ L'enseignement le plus important : la sous-estimation des sinistres extrêmes
 
@@ -102,14 +102,14 @@ L'analyse des résidus par segment révèle une limite majeure, avec un enjeu fi
 
 Cette faiblesse se confirme dans la validation par décile, le modèle doit non seulement être précis en moyenne, mais aussi **ordonner correctement les risques**, propriété essentielle pour la segmentation tarifaire :
 
-<p align="center"><img src="figures/fig_calibration_decile.png" width="650" alt="Calibration réel vs prédit par décile"></p>
+<p align="center"><img src="fig_calibration_decile.png" width="650" alt="Calibration réel vs prédit par décile"></p>
 
 Sur le dernier décile de prédiction, le coût réel moyen observé (4 527 €) est très inférieur au coût prédit moyen (8 055 €), signe d'une calibration imparfaite dans les segments extrêmes. **C'est le point le plus important d'un point de vue actuariel** : une bonne performance moyenne peut masquer une mauvaise capture des risques les plus coûteux, précisément ceux qui pèsent le plus sur le résultat technique.
 
 ### Facteurs explicatifs
 
-<p align="center"><img src="figures/fig_importance_rf.png" width="700" alt="Importance des variables - Random Forest"></p>
-<p align="center"><img src="figures/fig_shap_summary.png" width="700" alt="SHAP summary plot"></p>
+<p align="center"><img src="fig_importance_rf.png" width="700" alt="Importance des variables - Random Forest"></p>
+<p align="center"><img src="fig_shap_summary.png" width="700" alt="SHAP summary plot"></p>
 
 - **Le pouvoir explicatif global reste limité** (R² du meilleur modèle : 0,066) — une large part de la variabilité des coûts n'est pas expliquée par les variables disponibles, ce qui est cohérent avec la nature des sinistres (facteurs souvent absents des données : circonstances précises, météo, type de dommage).
 - **`DrivAge`, `VehAge` et `BonusMalus`** ressortent comme les variables les plus influentes selon le Random Forest et SHAP, malgré une significativité limitée en test univarié — signe d'effets combinés/non-linéaires mieux captés par les modèles d'ensemble que par les tests marginaux.
