@@ -26,7 +26,7 @@ Projet de Data Science actuarielle visant à modéliser le **coût des sinistres
 
 ## 🔑 Key Findings
 
-> ** Aucun modèle ne domine sur toutes les métriques (XGBoost gagne en MAE/RMSE/R², le GLM Gamma gagne en déviance Gamma), et surtout, **le modèle sous-estime fortement les sinistres les plus coûteux** (P99+ : coût réel moyen 21 083 € vs. coût prédit 3 489 €), ce qui constitue l'enseignement actuariel le plus important du projet.
+>  Aucun modèle ne domine sur toutes les métriques (XGBoost gagne en MAE/RMSE/R², le GLM Gamma gagne en déviance Gamma), et surtout, **le modèle sous-estime fortement les sinistres les plus coûteux** (P99+ : coût réel moyen 21 083 € vs. coût prédit 3 489 €), ce qui constitue l'enseignement actuariel le plus important du projet.
 
 | | |
 |---|---|
