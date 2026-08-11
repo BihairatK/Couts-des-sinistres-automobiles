@@ -7,7 +7,7 @@
 ![SHAP](https://img.shields.io/badge/SHAP-Interpretability-8A2BE2)
 
 
-Projet de Data Science actuarielle visant à modéliser le **coût des sinistres automobiles** (garantie Damage) à partir des caractéristiques de l'assuré, du véhicule et du contrat.
+Projet de Data Science actuarielle visant à modéliser le **coût des sinistres automobiles** (garantie Dommage) à partir des caractéristiques de l'assuré, du véhicule et du contrat.
 
 ---
 
