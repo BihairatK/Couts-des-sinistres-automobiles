@@ -1,4 +1,4 @@
-# Prédiction du coût des sinistres automobiles (sévérité)
+# Prédiction du coût des sinistres automobiles (Sévérité)
 
 ![Python](https://img.shields.io/badge/Python-3.10+-3776AB?logo=python&logoColor=white)
 ![Scikit-learn](https://img.shields.io/badge/Scikit--learn-ML-F7931E?logo=scikit-learn&logoColor=white)
