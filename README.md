@@ -7,7 +7,7 @@
 ![SHAP](https://img.shields.io/badge/SHAP-Interpretability-8A2BE2)
 
 
-Projet de Data Science actuarielle visant à modéliser le **coût des sinistres automobiles** (garantie Dommage) à partir des caractéristiques de l'assuré, du véhicule et du contrat.
+Projet d'Actuariat/ Data Science visant à modéliser le **coût des sinistres automobiles** (garantie Dommage) à partir des caractéristiques de l'assuré, du véhicule et du contrat.
 
 ---
 
@@ -26,7 +26,7 @@ Projet de Data Science actuarielle visant à modéliser le **coût des sinistres
 
 ## 🔑 Key Findings
 
->  Aucun modèle ne domine sur toutes les métriques (XGBoost gagne en MAE/RMSE/R², le GLM Gamma gagne en déviance Gamma), et surtout, **le modèle sous-estime fortement les sinistres les plus coûteux** (P99+ : coût réel moyen 21 083 € vs. coût prédit 3 489 €), ce qui constitue l'enseignement actuariel le plus important du projet.
+>  Aucun modèle ne domine sur toutes les métriques (XGBoost gagne en MAE/RMSE/R², le GLM Gamma gagne en déviance Gamma), et surtout, **le modèle sous-estime fortement les sinistres les plus coûteux** (P99+ : coût réel moyen 21 083 € vs. coût prédit 3 489 €).
 
 | | |
 |---|---|
